@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-05T15:04:42",
-  "description": "## [1.0.0-dev.4](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-07-05)\n\n### ✨ New Features\n\n* implement new premium unlock bypass replacing the broken one ([de00279](https://github.com/rRyteK/rytek-patches/commit/de002797cc5151d4ccf72f1311dfda79781817c7))",
-  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.4/patches-1.0.0-dev.4.mpp",
+  "created_at": "2026-07-05T16:03:31",
+  "description": "## [1.0.0-dev.5](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* Letting Morphe patch the hex codes instead of using a precompiled internal file ([2d1fe92](https://github.com/rRyteK/rytek-patches/commit/2d1fe92d7e945d688578e2d853ecc8aae81257ea))",
+  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.5/patches-1.0.0-dev.5.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.4"
+  "version": "1.0.0-dev.5"
 }

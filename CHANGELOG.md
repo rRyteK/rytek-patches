@@ -1,3 +1,9 @@
+## [1.0.0-dev.5](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* Letting Morphe patch the hex codes instead of using a precompiled internal file ([2d1fe92](https://github.com/rRyteK/rytek-patches/commit/2d1fe92d7e945d688578e2d853ecc8aae81257ea))
+
 ## [1.0.0-dev.4](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-07-05)
 
 ### ✨ New Features
