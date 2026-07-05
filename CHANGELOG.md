@@ -1,3 +1,13 @@
+## [1.0.0-dev.2](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* Adjust incorrect reference package name ([2ccb219](https://github.com/rRyteK/rytek-patches/commit/2ccb2195a1f7d9923f3ac5cd110bc01951247cb2))
+
+### ✨ New Features
+
+* Add bypass for pairip ([3bb5f5a](https://github.com/rRyteK/rytek-patches/commit/3bb5f5aba67334c4db534df4bcae2b50e06c438b))
+
 ## 1.0.0-dev.1 (2026-07-05)
 
 ### 🐛 Bug Fixes
