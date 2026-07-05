@@ -1,3 +1,10 @@
+## [1.0.0-dev.10](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* update the constants to reflect the changes ([3a1f103](https://github.com/rRyteK/rytek-patches/commit/3a1f103234b4c21deb76f75eb76c5998bce4a3ed))
+* update the constants to reflect the changes ([a9e9492](https://github.com/rRyteK/rytek-patches/commit/a9e9492cfcc2739b974d53e8eb74d66e8af8c5e6))
+
 ## [1.0.0-dev.9](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-07-05)
 
 ### 🐛 Bug Fixes

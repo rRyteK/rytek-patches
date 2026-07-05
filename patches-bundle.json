@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-05T19:22:05",
-  "description": "## [1.0.0-dev.9](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* polishing current capabilities ([467305b](https://github.com/rRyteK/rytek-patches/commit/467305b7f97d0ed8f23216bd2815283d705f89ef))",
-  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.9/patches-1.0.0-dev.9.mpp",
+  "created_at": "2026-07-05T19:35:28",
+  "description": "## [1.0.0-dev.10](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* update the constants to reflect the changes ([3a1f103](https://github.com/rRyteK/rytek-patches/commit/3a1f103234b4c21deb76f75eb76c5998bce4a3ed))\n* update the constants to reflect the changes ([a9e9492](https://github.com/rRyteK/rytek-patches/commit/a9e9492cfcc2739b974d53e8eb74d66e8af8c5e6))",
+  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.10/patches-1.0.0-dev.10.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.9"
+  "version": "1.0.0-dev.10"
 }

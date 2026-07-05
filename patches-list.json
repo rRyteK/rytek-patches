@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.9",
+  "version": "1.0.0-dev.10",
   "patches": [
     {
       "name": "Bypass Google Play Licensing (Pairip)",
@@ -97,16 +97,16 @@
       "compatiblePackages": [
         {
           "packageName": "com.spotify.music",
-          "name": null,
+          "name": "Spotify",
           "description": null,
-          "apkFileType": null,
-          "appIconColor": null,
+          "apkFileType": "APK",
+          "appIconColor": "#1DB954",
           "signatures": null,
           "targets": [
             {
               "version": null,
               "versionCodes": null,
-              "isExperimental": false,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
