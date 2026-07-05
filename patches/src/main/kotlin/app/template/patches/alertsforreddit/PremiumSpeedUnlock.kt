@@ -5,8 +5,8 @@ import app.morphe.patcher.patch.rawResourcePatch
 import app.template.patches.shared.Constants
 
 val premiumSpeedUnlockPatch = rawResourcePatch(
-    name = "Premium Speed Frequency Unlock",
-    description = "Bypasses the Premium Speed frequency check in the native Dart AOT snapshot."
+    name = "Premium Speed & Limit Unlock",
+    description = "Bypasses the Premium Speed frequency check and the 3-alert limit in the native Dart AOT snapshot."
 ) {
     compatibleWith(Constants.COMPATIBILITY_ALERTS_FOR_REDDIT)
 
@@ -21,41 +21,55 @@ val premiumSpeedUnlockPatch = rawResourcePatch(
         }
 
         val bytes = lib.readBytes()
+        var patchesApplied = 0
 
-        // The Signature:
-        // We are looking for the exact sequence of instructions immediately preceding the B.NE.
-        // We know the target instruction is the B.NE you found in your Hex Editor: C1 09 00 54.
-        // To be safe, we will search for the 12 bytes immediately before it + the 4 bytes of the B.NE.
-
-        // The Signature:
-        // 12 bytes of unique instructions right before the branch + the 4 bytes of the branch itself.
-        val signature = byteArrayOf(
-            // The 12 bytes preceding the branch
+        // ==========================================
+        // PATCH 1: Premium Speed Frequencies
+        // ==========================================
+        val signature1 = byteArrayOf(
             0x70, 0x37, 0x40, 0x91.toByte(),
             0x10, 0xEE.toByte(), 0x41, 0xF9.toByte(),
             0x3F, 0x00, 0x10, 0x6B,
-            // The target B.NE instruction
-            0xC1.toByte(), 0x09, 0x00, 0x54
+            0xC1.toByte(), 0x09, 0x00, 0x54 // B.NE
         )
 
-        val match = bytes.findUnique(signature)
-            ?: throw PatchException(
-                "Premium Speed frequency check signature not found in $libPath. " +
-                        "The app might have been updated and the assembly changed."
-            )
+        val match1 = bytes.findUnique(signature1)
+        if (match1 != null) {
+            val patch1 = byteArrayOf(0x1F, 0x20, 0x03, 0xD5.toByte()) // NOP
+            patch1.copyInto(bytes, match1 + 12)
+            println("Successfully NOP'd the Premium Speed frequency gatekeeper!")
+            patchesApplied++
+        } else {
+            println("Warning: Premium Speed frequency signature not found.")
+        }
 
-        // The Kill Shot:
-        // Overwrite the B.NE instruction with a NOP (No Operation).
-        // The offset of the B.NE inside our signature is at index 12.
-        val patch = byteArrayOf(
-            0x1F, 0x20, 0x03, 0xD5.toByte() // ARM64 NOP
+        // ==========================================
+        // PATCH 2: 3-Alert Limit (Gatekeeper #2)
+        // ==========================================
+        val signature2 = byteArrayOf(
+            0xC0.toByte(), 0x03, 0x3F, 0xD6.toByte(),
+            0x01, 0x7C, 0x41, 0x93.toByte(),
+            0x3F, 0x0C, 0x00, 0xF1.toByte(), // CMP X1, #3
+            0xEB.toByte(), 0x02, 0x00, 0x54  // B.LT
         )
 
-        // Apply the patch
-        patch.copyInto(bytes, match + 12)
+        val match2 = bytes.findUnique(signature2)
+        if (match2 != null) {
+            // Change B.LT (EB) to B.AL (EE) -> Branch Always
+            val patch2 = byteArrayOf(0xEE.toByte(), 0x02, 0x00, 0x54)
+            patch2.copyInto(bytes, match2 + 12)
+            println("Successfully bypassed the 3-alert limit!")
+            patchesApplied++
+        } else {
+            println("Warning: 3-alert limit signature not found.")
+        }
+
+        if (patchesApplied == 0) {
+            throw PatchException("No signatures matched. The app version might have changed.")
+        }
+
         lib.writeBytes(bytes)
-
-        println("Successfully NOP'd the Premium Speed gatekeeper at offset ${match + 12}!")
+        println("Successfully applied $patchesApplied patch(es) to libapp.so!")
     }
 }
 
