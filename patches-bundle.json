@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-05T16:03:31",
-  "description": "## [1.0.0-dev.5](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* Letting Morphe patch the hex codes instead of using a precompiled internal file ([2d1fe92](https://github.com/rRyteK/rytek-patches/commit/2d1fe92d7e945d688578e2d853ecc8aae81257ea))",
-  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.5/patches-1.0.0-dev.5.mpp",
+  "created_at": "2026-07-05T16:40:03",
+  "description": "## [1.0.0-dev.6](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-07-05)\n\n### ✨ New Features\n\n* Add bypass for the paywall window ([ca91b7a](https://github.com/rRyteK/rytek-patches/commit/ca91b7af017bee85f4b8e05b7baddbd2c7ff16cb))",
+  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.6/patches-1.0.0-dev.6.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.5"
+  "version": "1.0.0-dev.6"
 }
