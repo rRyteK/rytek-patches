@@ -5,6 +5,19 @@ import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 
 object Constants {
+    val COMPATIBILITY_ALERTS_FOR_REDDIT = Compatibility(
+        name = "Alerts For Reddit",
+        packageName = "alertsforreddit.amandaoneal.application",
+        apkFileType = ApkFileType.APK,
+        appIconColor = 0x348ceb,
+        targets = listOf(
+            AppTarget(
+                version = null,
+                isExperimental = true
+            )
+        )
+    )
+
     val COMPATIBILITY_EXAMPLE = Compatibility(
         name = "XYZ app", // App name as it appears in the Android launcher.
         packageName = "com.example.app",

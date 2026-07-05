@@ -1,7 +1,9 @@
 package app.template.patches.revenuecat
 
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.fingerprint.fingerprint
 import app.morphe.patcher.patch.bytecodePatch
+import app.template.patches.shared.Constants.COMPATIBILITY_ALERTS_FOR_REDDIT
 
 // 1. We create a fingerprint to find this exact method in the compiled app
 val isActiveFingerprint = fingerprint {
@@ -21,14 +23,7 @@ val unlockPremiumPatch = bytecodePatch(
     description = "Forces app to report that you have an active subscription.",
     default = true
 ) {
-    val COMPATIBILITY_YOUR_APP = Compatibility(
-        name = "Alerts For Reddit",             // The user-friendly name displayed in Morphe Manager
-        packageName = "alertsforreddit.amandaoneal.application",
-        appIconColor = 348ceb,           // Optional: Accent hex color for the Morphe UI card
-        //targets = listOf(
-        //  AppTarget(version = "1.4.2")   // REPLACE WITH: The version you are currently patching
-        )
-    )
+    compatibleWith(COMPATIBILITY_ALERTS_FOR_REDDIT)
 
     execute {
         // We inject raw Smali at index 0 (the very top of the method)
