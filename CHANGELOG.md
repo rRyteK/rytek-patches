@@ -1,3 +1,9 @@
+## [1.0.0-dev.6](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-07-05)
+
+### ✨ New Features
+
+* Add bypass for the paywall window ([ca91b7a](https://github.com/rRyteK/rytek-patches/commit/ca91b7af017bee85f4b8e05b7baddbd2c7ff16cb))
+
 ## [1.0.0-dev.5](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-07-05)
 
 ### 🐛 Bug Fixes

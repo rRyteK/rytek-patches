@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.5",
+  "version": "1.0.0-dev.6",
   "patches": [
     {
       "name": "Bypass Google Play Licensing (Pairip)",
@@ -64,8 +64,8 @@
       "options": []
     },
     {
-      "name": "Premium Speed Frequency Unlock",
-      "description": "Bypasses the Premium Speed frequency check in the native Dart AOT snapshot.",
+      "name": "Premium Speed & Limit Unlock",
+      "description": "Bypasses the Premium Speed frequency check and the 3-alert limit in the native Dart AOT snapshot.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
