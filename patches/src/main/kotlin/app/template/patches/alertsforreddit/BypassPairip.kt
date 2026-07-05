@@ -3,7 +3,7 @@ package app.template.patches.revenuecat
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
-import app.template.patches.shared.Constants.COMPATIBILITY_PATCH_TEST_APP
+import app.template.patches.shared.Constants.COMPATIBILITY_ALERTS_FOR_REDDIT
 
 // 1. Fingerprint the method that opens the Play Store / Error Dialog
 val startErrorDialogFingerprint = Fingerprint(
