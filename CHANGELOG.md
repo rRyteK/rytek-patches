@@ -1,3 +1,9 @@
+## [1.0.0-dev.9](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* polishing current capabilities ([467305b](https://github.com/rRyteK/rytek-patches/commit/467305b7f97d0ed8f23216bd2815283d705f89ef))
+
 ## [1.0.0-dev.8](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-07-05)
 
 ### ✨ New Features
