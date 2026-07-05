@@ -1,3 +1,9 @@
+## [1.0.0-dev.8](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-07-05)
+
+### ✨ New Features
+
+* Add "Fast" alert paywall bypass, change previous hex offset modification back to B.A for stability ([5a860c5](https://github.com/rRyteK/rytek-patches/commit/5a860c51f97e64717dd7ea1e7f6d0108273dd997))
+
 ## [1.0.0-dev.7](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-07-05)
 
 ### 🐛 Bug Fixes
