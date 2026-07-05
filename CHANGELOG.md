@@ -1,3 +1,9 @@
+## [1.0.0-dev.3](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-07-05)
+
+### ✨ New Features
+
+* strengthen drm bypass ([071a15f](https://github.com/rRyteK/rytek-patches/commit/071a15fc96543169e92f0440241d3a9501614cb9))
+
 ## [1.0.0-dev.2](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-07-05)
 
 ### 🐛 Bug Fixes
