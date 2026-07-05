@@ -3,6 +3,7 @@ package app.template.patches.spotify
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
+import app.template.patches.shared.Constants
 
 val playerRestrictionsFingerprint = Fingerprint(
     definingClass = "Lcom/spotify/interapp/model/PlayerRestrictions;",
@@ -15,7 +16,7 @@ val unlockSpotifyPremiumPatch = bytecodePatch(
     name = "Spotify Infinite Skips & On-Demand",
     description = "Forces PlayerRestrictions to always allow skipping, seeking, and toggling shuffle."
 ) {
-    compatibleWith("com.spotify.music")
+    compatibleWith(Constants.COMPATIBILITY_SPOTIFY)
 
     execute {
         playerRestrictionsFingerprint.method.addInstructions(

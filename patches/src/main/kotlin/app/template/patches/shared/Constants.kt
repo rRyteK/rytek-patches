@@ -57,4 +57,16 @@ object Constants {
         )
     )
 
-}
+    val COMPATIBILITY_SPOTIFY = Compatibility(
+        name = "Spotify",
+        packageName = "com.spotify.music",
+        apkFileType = ApkFileType.APK,
+        appIconColor = 0x1DB954,
+        targets = listOf(
+            AppTarget(
+                version = null,
+                isExperimental = true
+            )
+        )
+    )
+
