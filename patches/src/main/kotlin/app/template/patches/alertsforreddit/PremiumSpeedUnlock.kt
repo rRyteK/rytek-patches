@@ -4,9 +4,9 @@ import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.rawResourcePatch
 import app.template.patches.shared.Constants
 
-val premiumSpeedUnlockPatch = rawResourcePatch(
-    name = "Premium Speed & Limit Unlock",
-    description = "Bypasses the Premium Speed frequency check and the 3-alert limit in the native Dart AOT snapshot."
+val unlockPremiumPatch = rawResourcePatch(
+    name = "Unlock All Premium Features",
+    description = "Bypasses the Premium Speed frequency check AND the 3-alert limit."
 ) {
     compatibleWith(Constants.COMPATIBILITY_ALERTS_FOR_REDDIT)
 
@@ -15,61 +15,52 @@ val premiumSpeedUnlockPatch = rawResourcePatch(
         val lib = get(libPath)
 
         if (!lib.exists()) {
-            throw PatchException(
-                "$libPath not found. Apply this patch to an APK that includes the arm64-v8a native split."
-            )
+            throw PatchException("$libPath not found. Apply this patch to an APK that includes the arm64-v8a native split.")
         }
 
         val bytes = lib.readBytes()
-        var patchesApplied = 0
 
         // ==========================================
-        // PATCH 1: Premium Speed Frequencies
+        // PATCH 1: Premium Speed Frequency Unlock
         // ==========================================
-        val signature1 = byteArrayOf(
+        val speedSignature = byteArrayOf(
             0x70, 0x37, 0x40, 0x91.toByte(),
             0x10, 0xEE.toByte(), 0x41, 0xF9.toByte(),
             0x3F, 0x00, 0x10, 0x6B,
-            0xC1.toByte(), 0x09, 0x00, 0x54 // B.NE
+            0xC1.toByte(), 0x09, 0x00, 0x54
         )
+        val speedPatch = byteArrayOf(0x1F, 0x20, 0x03, 0xD5.toByte()) // ARM64 NOP
 
-        val match1 = bytes.findUnique(signature1)
-        if (match1 != null) {
-            val patch1 = byteArrayOf(0x1F, 0x20, 0x03, 0xD5.toByte()) // NOP
-            patch1.copyInto(bytes, match1 + 12)
-            println("Successfully NOP'd the Premium Speed frequency gatekeeper!")
-            patchesApplied++
-        } else {
-            println("Warning: Premium Speed frequency signature not found.")
-        }
+        val speedMatch = bytes.findUnique(speedSignature)
+            ?: throw PatchException("Premium Speed frequency check signature not found.")
+
+        speedPatch.copyInto(bytes, speedMatch + 12)
+        println("Successfully NOP'd the Premium Speed gatekeeper at offset ${speedMatch + 12}!")
 
         // ==========================================
-        // PATCH 2: 3-Alert Limit (Gatekeeper #2)
+        // PATCH 2: Unlock Alerts Limit (3 alerts max)
         // ==========================================
-        val signature2 = byteArrayOf(
-            0xC0.toByte(), 0x03, 0x3F, 0xD6.toByte(),
-            0x01, 0x7C, 0x41, 0x93.toByte(),
-            0x3F, 0x0C, 0x00, 0xF1.toByte(), // CMP X1, #3
-            0xEB.toByte(), 0x02, 0x00, 0x54  // B.LT
+        // The Signature:
+        // CMP X1, #3  -> F1 00 0C 3F
+        // B.LT offset -> EB 02 00 54
+        val alertsSignature = byteArrayOf(
+            0xF1.toByte(), 0x00, 0x0C, 0x3F,
+            0xEB.toByte(), 0x02, 0x00, 0x54
         )
 
-        val match2 = bytes.findUnique(signature2)
-        if (match2 != null) {
-            // Change B.LT (EB) to B.AL (EE) -> Branch Always
-            val patch2 = byteArrayOf(0xEE.toByte(), 0x02, 0x00, 0x54)
-            patch2.copyInto(bytes, match2 + 12)
-            println("Successfully bypassed the 3-alert limit!")
-            patchesApplied++
-        } else {
-            println("Warning: 3-alert limit signature not found.")
-        }
+        // The Kill Shot:
+        // We overwrite the conditional B.LT (EB 02 00 54) with an unconditional B (17 00 00 14).
+        val alertsPatch = byteArrayOf(0x17, 0x00, 0x00, 0x14)
 
-        if (patchesApplied == 0) {
-            throw PatchException("No signatures matched. The app version might have changed.")
-        }
+        val alertsMatch = bytes.findUnique(alertsSignature)
+            ?: throw PatchException("Alerts limit signature not found.")
+
+        // Offset by 4 to overwrite the B.LT instruction (which is the second 4-byte chunk)
+        alertsPatch.copyInto(bytes, alertsMatch + 4)
+        println("Successfully bypassed the 3-alert limit at offset ${alertsMatch + 4}!")
 
         lib.writeBytes(bytes)
-        println("Successfully applied $patchesApplied patch(es) to libapp.so!")
+        println("All native patches applied successfully!")
     }
 }
 
