@@ -13,7 +13,7 @@ val checkLicenseFingerprint = Fingerprint(
     returnType = "V"
 )
 
-// 2. The Response Handler: Just in case it gets triggered another way.
+// 2. response handler
 val processResponseFingerprint = Fingerprint(
     definingClass = "Lcom/pairip/licensecheck/LicenseClient;",
     name = "processResponse",
@@ -21,7 +21,7 @@ val processResponseFingerprint = Fingerprint(
     returnType = "V"
 )
 
-// 3. The Paywall Launcher: The exact method that was sneaking past your last patch.
+// 3. the paywall launcher
 val startPaywallFingerprint = Fingerprint(
     definingClass = "Lcom/pairip/licensecheck/LicenseClient;",
     name = "startPaywallActivity",
