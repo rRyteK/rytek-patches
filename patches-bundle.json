@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-05T09:35:20",
-  "description": "## [1.0.0-dev.3](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-07-05)\n\n### ✨ New Features\n\n* strengthen drm bypass ([071a15f](https://github.com/rRyteK/rytek-patches/commit/071a15fc96543169e92f0440241d3a9501614cb9))",
-  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.3/patches-1.0.0-dev.3.mpp",
+  "created_at": "2026-07-05T15:04:42",
+  "description": "## [1.0.0-dev.4](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-07-05)\n\n### ✨ New Features\n\n* implement new premium unlock bypass replacing the broken one ([de00279](https://github.com/rRyteK/rytek-patches/commit/de002797cc5151d4ccf72f1311dfda79781817c7))",
+  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.4/patches-1.0.0-dev.4.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.3"
+  "version": "1.0.0-dev.4"
 }

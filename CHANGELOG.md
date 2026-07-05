@@ -1,3 +1,9 @@
+## [1.0.0-dev.4](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-07-05)
+
+### ✨ New Features
+
+* implement new premium unlock bypass replacing the broken one ([de00279](https://github.com/rRyteK/rytek-patches/commit/de002797cc5151d4ccf72f1311dfda79781817c7))
+
 ## [1.0.0-dev.3](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-07-05)
 
 ### ✨ New Features
