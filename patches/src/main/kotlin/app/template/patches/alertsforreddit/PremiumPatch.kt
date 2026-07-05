@@ -18,11 +18,11 @@ val isActiveFingerprint = fingerprint {
 // 2. We define the patch that edits the bytecode
 val unlockPremiumPatch = bytecodePatch(
     name = "Unlock Premium",
-    description = "Forces RevenueCat to report that you have an active subscription.",
+    description = "Forces app to report that you have an active subscription.",
     default = true
 ) {
     val COMPATIBILITY_YOUR_APP = Compatibility(
-        name = "The App Name",             // The user-friendly name displayed in Morphe Manager
+        name = "Alerts For Reddit",             // The user-friendly name displayed in Morphe Manager
         packageName = "alertsforreddit.amandaoneal.application",
         appIconColor = 348ceb,           // Optional: Accent hex color for the Morphe UI card
         //targets = listOf(

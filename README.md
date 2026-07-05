@@ -1,4 +1,4 @@
-# 👋🧩 Morphe Patches template
+# 👋🧩 Rytek Patches
 
 Template repository for Morphe Patches.
 
@@ -34,7 +34,7 @@ To start using this template, follow these steps:
 4. Update the [README.md](README.md) file to be specific of your repo, and update the links in the [issue templates](.github/ISSUE_TEMPLATE).
 5. Choose a name for your patches project. Keep in mind you must use a name that does not 
    imply authorship by the Morphe open source project. If unsure, then simply name these
-   patches after yourself ("UserXYZ Morphe patches"). See the [NOTICE](NOTICE) for details. 
+   patches after yourself ("Rytek Morphe patches"). See the [NOTICE](NOTICE) for details. 
 6. (Optional): Add `patches-bundle.png` to the project if you want a custom icon to show in
    Morphe Manager instead of your GitHub profile avatar.
 
@@ -71,15 +71,15 @@ To develop and release your Patches using this template:
 
 #### How to use these patches
 
-Click here to add these patches to Morphe: https://morphe.software/add-source?github=xyz-user/xyz-patches
+Click here to add these patches to Morphe: https://morphe.software/add-source?github=rRyteK/rytek-patches
 
-Or manually add this repository url as a patch source in Morphe: https://github.com/xyz-user/xyz-patches
+Or manually add this repository url as a patch source in Morphe: https://github.com/rRyteK/rytek-patches
 
 ### 🛠️ Building
 
-To build UserXYZ Patches,
+To build Rytek Patches,
 you can follow the [Morphe documentation](https://github.com/MorpheApp/morphe-documentation).
 
 ## 📜 License
 
-UserXYZ Patches are licensed under the [GNU General Public License v3.0](LICENSE)
+Rytek Patches are licensed under the [GNU General Public License v3.0](LICENSE)
