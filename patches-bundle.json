@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-05T08:38:45",
-  "description": "## 1.0.0-dev.1 (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* Fixed compilation errors in PremiumPatch ([5705dde](https://github.com/rRyteK/rytek-patches/commit/5705dde3424e93a3de72ca366b7b376bc8f43748))\n* Update PremiumPatch to current Morphe API ([dcf9561](https://github.com/rRyteK/rytek-patches/commit/dcf9561d9e952ce16884f11b7152fb2d0d7138a3))\n\n### ✨ New Features\n\n* Initial patch release ([5cae56c](https://github.com/rRyteK/rytek-patches/commit/5cae56cbbfffec1e69610694f9049271dd780ef5))",
-  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.1/patches-1.0.0-dev.1.mpp",
+  "created_at": "2026-07-05T09:22:25",
+  "description": "## [1.0.0-dev.2](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* Adjust incorrect reference package name ([2ccb219](https://github.com/rRyteK/rytek-patches/commit/2ccb2195a1f7d9923f3ac5cd110bc01951247cb2))\n\n### ✨ New Features\n\n* Add bypass for pairip ([3bb5f5a](https://github.com/rRyteK/rytek-patches/commit/3bb5f5aba67334c4db534df4bcae2b50e06c438b))",
+  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.2/patches-1.0.0-dev.2.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.1"
+  "version": "1.0.0-dev.2"
 }
