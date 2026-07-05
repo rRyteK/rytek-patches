@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-05T16:40:03",
-  "description": "## [1.0.0-dev.6](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-07-05)\n\n### ✨ New Features\n\n* Add bypass for the paywall window ([ca91b7a](https://github.com/rRyteK/rytek-patches/commit/ca91b7af017bee85f4b8e05b7baddbd2c7ff16cb))",
-  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.6/patches-1.0.0-dev.6.mpp",
+  "created_at": "2026-07-05T16:55:35",
+  "description": "## [1.0.0-dev.7](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-07-05)\n\n### 🐛 Bug Fixes\n\n* change hex offset modification to B.A instead of B.AL for better arm64 compatability ([0ad8843](https://github.com/rRyteK/rytek-patches/commit/0ad8843243a2a6715ea2dfaa41ec5cb2459115a0))",
+  "download_url": "https://github.com/rRyteK/rytek-patches/releases/download/v1.0.0-dev.7/patches-1.0.0-dev.7.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.6"
+  "version": "1.0.0-dev.7"
 }

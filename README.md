@@ -11,7 +11,7 @@ TODO: Update this about section with a brief introduction/summary about this rep
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.6](https://github.com/rRyteK/rytek-patches/releases/tag/v1.0.0-dev.6)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
+> **[v1.0.0-dev.7](https://github.com/rRyteK/rytek-patches/releases/tag/v1.0.0-dev.7)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
 <details open>
 <summary>📦 Alerts For Reddit&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>
@@ -19,7 +19,7 @@ TODO: Update this about section with a brief introduction/summary about this rep
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
 | [Bypass Google Play Licensing (Pairip)](#bypass-google-play-licensing-pairip) | Completely neutralizes the pairip DRM by killing the check at the entry point and blocking paywall intents. |  |
-| [Premium Speed & Limit Unlock](#premium-speed-limit-unlock) | Bypasses the Premium Speed frequency check and the 3-alert limit in the native Dart AOT snapshot. |  |
+| [Unlock All Premium Features](#unlock-all-premium-features) | Bypasses the Premium Speed frequency check AND the 3-alert limit. |  |
 
 </details>
 
