@@ -1,3 +1,9 @@
+## [1.0.0-dev.7](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-07-05)
+
+### 🐛 Bug Fixes
+
+* change hex offset modification to B.A instead of B.AL for better arm64 compatability ([0ad8843](https://github.com/rRyteK/rytek-patches/commit/0ad8843243a2a6715ea2dfaa41ec5cb2459115a0))
+
 ## [1.0.0-dev.6](https://github.com/rRyteK/rytek-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-07-05)
 
 ### ✨ New Features
