@@ -1,0 +1,46 @@
+package app.template.patches.revenuecat
+
+import app.morphe.patcher.fingerprint.fingerprint
+import app.morphe.patcher.patch.bytecodePatch
+
+// 1. We create a fingerprint to find this exact method in the compiled app
+val isActiveFingerprint = fingerprint {
+    custom { method, classDef ->
+        // We match the class name you found in JADX
+        classDef.type == "Lcom/revenuecat/purchases/EntitlementInfo;" &&
+                // We match the exact method name
+                method.name == "isActive" &&
+                // "()Z" means it takes no arguments and returns a Boolean (Z)
+                method.descriptor == "()Z"
+    }
+}
+
+// 2. We define the patch that edits the bytecode
+val unlockPremiumPatch = bytecodePatch(
+    name = "Unlock Premium",
+    description = "Forces RevenueCat to report that you have an active subscription.",
+    default = true
+) {
+    val COMPATIBILITY_YOUR_APP = Compatibility(
+        name = "The App Name",             // The user-friendly name displayed in Morphe Manager
+        packageName = "alertsforreddit.amandaoneal.application",
+        appIconColor = 348ceb,           // Optional: Accent hex color for the Morphe UI card
+        //targets = listOf(
+        //  AppTarget(version = "1.4.2")   // REPLACE WITH: The version you are currently patching
+        )
+    )
+
+    execute {
+        // We inject raw Smali at index 0 (the very top of the method)
+        isActiveFingerprint.method.addInstructions(
+            0,
+            """
+            # Load the number 1 (true) into register v0
+            const/4 v0, 0x1
+            
+            # Return register v0 immediately
+            return v0
+            """
+        )
+    }
+}
