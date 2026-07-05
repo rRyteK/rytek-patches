@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.8",
+  "version": "1.0.0-dev.9",
   "patches": [
     {
       "name": "Bypass Google Play Licensing (Pairip)",
@@ -81,6 +81,32 @@
               "version": null,
               "versionCodes": null,
               "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Spotify Infinite Skips & On-Demand",
+      "description": "Forces PlayerRestrictions to always allow skipping, seeking, and toggling shuffle.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.spotify.music",
+          "name": null,
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": null,
+          "signatures": null,
+          "targets": [
+            {
+              "version": null,
+              "versionCodes": null,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
